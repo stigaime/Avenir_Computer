@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class NavController extends AbstractController
+class PortableController extends AbstractController
 {
-    #[Route('/nav', name: 'app_nav')]
+    #[Route('/portable', name: 'app_portable')]
     public function index(): Response
     {
-        return $this->render('nav.html.twig', [
-            'controller_name' => 'NavController',
+        return $this->render('portable/index.html.twig', [
+            'controller_name' => 'PortableController',
         ]);
     }
 }
