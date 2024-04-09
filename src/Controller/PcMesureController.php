@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class NavController extends AbstractController
+class PcMesureController extends AbstractController
 {
-    #[Route('/nav', name: 'app_nav')]
+    #[Route('/pc/mesure', name: 'app_pc_mesure')]
     public function index(): Response
     {
-        return $this->render('nav.html.twig', [
-            'controller_name' => 'NavController',
+        return $this->render('pc_mesure/index.html.twig', [
+            'controller_name' => 'PcMesureController',
         ]);
     }
 }
