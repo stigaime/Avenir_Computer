@@ -31,4 +31,9 @@
         {# Contenu spécifique à chaque page #}
         {% endblock %}
     </body>
+    <footer class="">
+    {% block footer %}
+        {% include "footer.html.twig" %}
+    {% endblock %}
+</footer>
 </html>
