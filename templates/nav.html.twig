@@ -50,20 +50,23 @@
             
             
           </ul>
+        </ul>
+        <ul class="navbar-nav ms-auto"> <!-- Nouvel élément ul avec classe ms-auto pour aligner à droite -->
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('app_pc_mesure') }}">Pc sur mesure</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+            <button class="btn btn-outline-warning" type="submit">Recherche</button>
+          </form>
         </li>
-         <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
         </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
-        <button class="btn btn-outline-warning" type="submit">Recherche</button>
-      </form>
+        </ul>
+     
+      
     </div>
   </div>
 </nav>

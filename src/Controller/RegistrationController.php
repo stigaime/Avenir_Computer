@@ -20,9 +20,15 @@ class RegistrationController extends AbstractController
 {
     private EmailVerifier $emailVerifier;
 
+   
     public function __construct(EmailVerifier $emailVerifier)
     {
         $this->emailVerifier = $emailVerifier;
+// mettre un email de verification ici !!!!!!!!!!!!!!!!!!!!
+// mettre un email de verification ici !!!!!!!!!!!!!!!!!!!!  
+// mettre un email de verification ici !!!!!!!!!!!!!!!!!!!! 
+// avenir@live.fr 
+// nom: Avenir Computer
     }
 
     #[Route('/register', name: 'app_register')]
