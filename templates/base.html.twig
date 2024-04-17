@@ -27,6 +27,16 @@
     {# avoir ma nav sur toutes mes pages #}
     
 		{{ render(controller('App\\Controller\\NavController::index')) }}
+        
+{#
+        {{% for label, ùessages in app.flashes %}
+            {% message in messages %}
+                <div class="alert amert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}}
+#}
         {% block body %}
         {# Contenu spécifique à chaque page #}
         {% endblock %}
