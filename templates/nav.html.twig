@@ -50,6 +50,10 @@
             
             
           </ul>
+         <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_pc_mesure') }}">Pc sur mesure</a>
+        </li>
+
         </ul>
         <ul class="navbar-nav ms-auto"> <!-- Nouvel élément ul avec classe ms-auto pour aligner à droite -->
         <li class="nav-item">
@@ -58,12 +62,18 @@
             <button class="btn btn-outline-warning" type="submit">Recherche</button>
           </form>
         </li>
-        <li class="nav-item">
+        {# connexion ///// deconnexion #}
+        {% if app.user %}
+          <a class="nav-link" href="{{ path('app_logout')}}">    {{ app.user.email }}</a>
+        {% else %}
+           <li class="nav-item">
           <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
         </li>
+        {% endif %}
+
         </ul>
      
       
