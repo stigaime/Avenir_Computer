@@ -5,10 +5,15 @@
 {#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
 {% block body %}
 <body>
- <h1> portable {{ id }}
+ {#<h1> portable {{ portable.id }}
+ </h1>#}
+ <h1> {{ portable.title }}
  </h1>
- <p> {{ name }}
- </p>
-
+ <h2> {{ portable.description }}
+ </h2>
+  <h2> {{ portable.price }}
+ </h2>
+   <h2> {{ portable.stock }}
+ </h2>
 </body>
 {% endblock %}
