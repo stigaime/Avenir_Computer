@@ -1,5 +1,9 @@
+{% extends 'base.html.twig' %}
 
 
+{% block title %}{{ parent() }} - Pc portable{% endblock %}
+{#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
+{% block body %}
 <body>
  <h1> portable {{ id }}
  </h1>
@@ -7,3 +11,4 @@
  </p>
 
 </body>
+{% endblock %}

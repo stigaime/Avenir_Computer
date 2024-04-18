@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contactez-nous{% endblock %}
+{% block title %}{{ parent() }} - Contact{% endblock %}
 {#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
 {% block body %}
 
@@ -12,7 +12,7 @@
 
     {{form_widget(form)}}
 
-    <button class="btn btn-primary" formnovalidate>Envoyer</button>
+    <button class="btn btn-secondary" formnovalidate>Envoyer</button>
 
 
 {{ form_end(form)}}

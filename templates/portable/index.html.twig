@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}Contactez-nous{% endblock %}
+{% block title %}{{ parent() }} - Pc portable{% endblock %}
 {#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
 {% block body %}
 
@@ -9,7 +9,9 @@
     <ul>
 {% for portable in portables %}
     <li>
-    {{ portable }}
+
+    <a href="{{ path('app_portable_show', { id: portable.id}) }}"> {{ portable.name }}</a>
+ 
     </li>
 {% endfor %}
 </ul>
