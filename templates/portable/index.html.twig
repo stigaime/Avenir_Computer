@@ -6,13 +6,22 @@
 {% block body %}
 
 <body>
+
+<h1>PORTABLES
+</h1>
     <ul>
 {% for portable in portables %}
-    <li>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ portable.title }}</h5>
+    <p class="card-text">{{ portable.description }}</p>
+     <h5 class="card-title">{{ portable.price }} €</h5>
 
-    <a href="{{ path('app_portable_show', { id: portable.id}) }}"> {{ portable.title }}</a>
- 
-    </li>
+    <a href="{{ path('app_portable_show', { id: portable.id}) }}" class="btn btn-danger">Détails</a>
+  </div>
+</div>
+   
 {% endfor %}
 </ul>
   
