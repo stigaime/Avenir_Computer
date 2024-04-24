@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PortableRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 #[ORM\Entity(repositoryClass: PortableRepository::class)]
 class Portable
@@ -21,6 +22,10 @@ class Portable
 
     #[ORM\Column(length: 255)]
     private ?string $picture = null;
+
+    //#[Assert\Image(maxSize: "1024k")]
+
+    private $pictureFile;
 
     #[ORM\Column(length: 255)]
     private ?string $stock = null;
@@ -65,6 +70,18 @@ class Portable
     public function setPicture(string $picture): static
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    public function getPictureFile(): ?UploadedFile
+    {
+        return $this->pictureFile;
+    }
+
+    public function setPictureFile(UploadedFile $pictureFile): static
+    {
+        $this->pictureFile = $pictureFile;
 
         return $this;
     }
