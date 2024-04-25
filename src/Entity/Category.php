@@ -9,6 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
 class Category
+
+
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -42,6 +44,11 @@ class Category
 
         return $this;
     }
+
+    public function __toString()
+{
+    return $this->name; // Supposons que 'name' soit le nom de la catégorie
+}
 
     /**
      * @return Collection<int, composer>
