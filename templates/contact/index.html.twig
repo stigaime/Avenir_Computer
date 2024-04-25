@@ -1,22 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contactez-nous{% endblock %}
+{% block title %}{{ parent() }} - Contact{% endblock %}
 {#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
 {% block body %}
 
 <div class="container">
 
 <h1>contactez-nous</h1>
+<h2>Email</h2>
 
 {{ form_start(form)}}
 
     {{form_widget(form)}}
 
-    <button class="btn btn-primary" formnovalidate>Envoyer</button>
+    <button class="btn btn-secondary" formnovalidate>Envoyer</button>
 
 
 {{ form_end(form)}}
 
 </div>
+<div>
+<h2>Téléphone</h2>
+<h3>04 93 74 34 12</h3>
+
+</div>
+
+   <a aria-label="" href="https://www.facebook.com/AvenirComputer/">
+                      <h2>Facebook</h2>
+                    </a>
 
 {% endblock %}
