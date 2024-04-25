@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}{{ parent() }} - Composants{% endblock %}
+{#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
+{% block body %}
+<body>
+
+ {#<h1> composer {{ composer.id }}
+ </h1>#}
+ <h1> {{ composer.title }}
+ </h1>
+ {#<h2> {{ composer.description }}
+ </h2>
+  <h2> {{ composer.price }}
+ </h2>
+   <h2> {{ composer.stock }}
+ </h2>#}
+<div class="card mb-3">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+
+    <p class="card-text">{{ composer.description }}</p>
+    <h5 class="card-title">{{ composer.price }}</h5>
+    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+</body>
+{% endblock %}
