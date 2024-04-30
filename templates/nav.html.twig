@@ -1,57 +1,60 @@
-<nav class="navbar navbar-expand-lg bg-primary">
+
+
+
+<nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Avenir Computer</a>
+    <a class="navbar-brand text-orange" href="#">AVENIR <br> COMPUTER</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
+          <a class="nav-link active text-white" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('app_portable') }}">Portables</a>
+          <a class="nav-link text-white" href="{{ path('app_portable') }}">Portables</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Composants
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu bg-dark">
           
-            <li><a class="dropdown-item" href="#">Boitiers/Alims</a></li>
-            <li><a class="dropdown-item" href="#">Carte mère</a></li>
-            <li><a class="dropdown-item" href="#">Carte son</a></li>
-            <li><a class="dropdown-item" href="#">Carte vidéo</a></li>
-            <li><a class="dropdown-item" href="#">Disque dur</a></li>
-            <li><a class="dropdown-item" href="#">Graveur CD/DVD</a></li>
-            <li><a class="dropdown-item" href="#">Logiciel</a></li>
-            <li><a class="dropdown-item" href="#">Mémoire</a></li>
-            <li><a class="dropdown-item" href="#">Processeur</a></li>
-            <li><a class="dropdown-item" href="#">Réseau</a></li>
-            <li><a class="dropdown-item" href="#">Ventilateur</a></li>
+            <li><a class="dropdown-item text-white" href="#">Boitiers/Alims</a></li>
+            <li><a class="dropdown-item text-white" href="#">Carte mère</a></li>
+            <li><a class="dropdown-item text-white" href="#">Carte son</a></li>
+            <li><a class="dropdown-item text-white" href="#">Carte vidéo</a></li>
+            <li><a class="dropdown-item text-white" href="#">Disque dur</a></li>
+            <li><a class="dropdown-item text-white" href="#">Graveur CD/DVD</a></li>
+            <li><a class="dropdown-item text-white" href="#">Logiciel</a></li>
+            <li><a class="dropdown-item text-white" href="#">Mémoire</a></li>
+            <li><a class="dropdown-item text-white" href="#">Processeur</a></li>
+            <li><a class="dropdown-item text-white" href="#">Réseau</a></li>
+            <li><a class="dropdown-item text-white" href="#">Ventilateur</a></li>
             
             
           </ul>
 
 
            <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Périphériques Pc
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ path('app_composer') }}">Casque</a></li>
-            <li><a class="dropdown-item" href="#">Clavier</a></li>
-            <li><a class="dropdown-item" href="#">Souris</a></li>
-            <li><a class="dropdown-item" href="#">Enceintes</a></li>
-            <li><a class="dropdown-item" href="#">Imprimantes</a></li>
-            <li><a class="dropdown-item" href="#">Scanners</a></li>
-              <li><a class="dropdown-item" href="#">Routeur/Switch</a></li>
-              <li><a class="dropdown-item" href="#">Onduleur</a></li>
+          <ul class="dropdown-menu bg-dark">
+            <li><a class="dropdown-item text-white" href="{{ path('app_composer', {'category_id' : '1'}) }}">Casque</a></li>
+            <li><a class="dropdown-item text-white" href="#">Clavier</a></li>
+            <li><a class="dropdown-item text-white" href="#">Souris</a></li>
+            <li><a class="dropdown-item text-white" href="#">Enceintes</a></li>
+            <li><a class="dropdown-item text-white" href="#">Imprimantes</a></li>
+            <li><a class="dropdown-item text-white" href="#">Scanners</a></li>
+              <li><a class="dropdown-item text-white" href="#">Routeur/Switch</a></li>
+              <li><a class="dropdown-item text-white" href="#">Onduleur</a></li>
             
             
           </ul>
          <li class="nav-item">
-          <a class="nav-link" href="{{ path('app_pc_mesure') }}">Pc sur mesure</a>
+          <a class="nav-link text-white" href="{{ path('app_pc_mesure') }}">Pc sur mesure</a>
         </li>
 
         </ul>
@@ -59,18 +62,18 @@
         <li class="nav-item">
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
-            <button class="btn btn-outline-warning" type="submit">Recherche</button>
+            <button class="btn btn-outline-primary text-white" type="submit">Recherche</button>
           </form>
         </li>
         {# connexion ///// deconnexion #}
         {% if app.user %}
-          <a class="nav-link" href="{{ path('app_logout')}}">    {{ app.user.email }}</a>
+          <a class="nav-link text-white" href="{{ path('app_logout')}}">    {{ app.user.email }}</a>
         {% else %}
            <li class="nav-item">
-          <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+          <a class="nav-link text-white" href="{{ path('app_login') }}">Connexion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
+          <a class="nav-link text-white" href="{{ path('app_register') }}">Inscription</a>
         </li>
         {% endif %}
 

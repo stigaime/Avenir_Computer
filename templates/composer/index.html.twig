@@ -11,6 +11,7 @@
 </h1>
     <ul>
 {% for composer in composers %}
+
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
@@ -18,7 +19,7 @@
     <p class="card-text">{{ composer.description }}</p>
      <h5 class="card-title">{{ composer.price }} €</h5>
 
-    <a href="{{ path('app_composer_show', { id: composer.id}) }}" class="btn btn-danger">Détails</a>
+    <a href="{{ path('app_composer_show', { id: composer.id}) }}" class="btn btn-custom">Détails</a>
   </div>
 </div>
    
