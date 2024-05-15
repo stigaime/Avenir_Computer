@@ -8,7 +8,7 @@
 
  {#<h1> composer {{ composer.id }}
  </h1>#}
- <h1> {{ composer.name }}
+ <h1 class="text-orange text-center"> {{ composer.name }}
  </h1>
  {#<h2> {{ composer.description }}
  </h2>
@@ -16,14 +16,21 @@
  </h2>
    <h2> {{ composer.stock }}
  </h2>#}
-<div class="card mb-3">
+<div class="card bg-dark mb-3">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
 
-    <p class="card-text">{{ composer.description }}</p>
-    <h5 class="card-title">{{ composer.price }} €</h5>
+    <p class="card-text text-white">{{ composer.description }}</p>
+    <h5 class="card-title text-white">{{ composer.price }} €</h5>
       <a href="" class="btn btn-custom">Acheter</a>
   </div>
 </div>
+
+<style>
+    .card {
+        border: 1px solid white; /* Définir la bordure de la carte en blanc */
+    }
+</style>
+
 </body>
 {% endblock %}

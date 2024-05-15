@@ -8,7 +8,7 @@
 
  {#<h1> portable {{ portable.id }}
  </h1>#}
- <h1> {{ portable.title }}
+ <h1 class="text-orange text-center"> {{ portable.title }}
  </h1>
  {#<h2> {{ portable.description }}
  </h2>
@@ -22,8 +22,15 @@
 
     <p class="card-text text-white">{{ portable.description }}</p>
     <h5 class="card-title text-white">{{ portable.price }} €</h5>
-    <p class="card-text text-white"><small class="text-body -secondary">Last updated 3 mins ago</small></p>
+  <a href="" class="btn btn-custom">Acheter</a>
   </div>
 </div>
+
+<style>
+    .card {
+        border: 1px solid white; /* Définir la bordure de la carte en blanc */
+    }
+</style>
+
 </body>
 {% endblock %}
