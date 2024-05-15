@@ -1,8 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
 
-* {
-    color: black !important;
-}
 
 a {
     text-decoration: none;
@@ -11,3 +8,40 @@ a {
 ul {
     list-style: none;
 }
+.dropdown-item:hover {
+    background-color: rgb(255, 128, 24) !important; /* Changez la couleur de fond en vert lorsque survolé */
+    
+}
+.btn-custom {
+    background-color:rgb(255, 128, 24);
+    color: white;
+    /* Autres styles personnalisés si nécessaire */
+}
+.text-orange {
+    color:rgb(255, 128, 24) !important;
+   
+    
+}
+
+.bg-home {
+    background-color: white !important; /* Changez la couleur de fond en vert lorsque survolé */
+    
+}
+
+.nav-orange:hover {
+    background-color: rgb(255, 128, 24) !important; /* Changez la couleur de fond en vert lorsque survolé */
+    
+}
+.bg-avenir {
+    background-color: rgb(255, 128, 24) ;
+}
+
+.pdaime {
+    padding-top: 25rem;
+   font-size: 7rem;
+  
+      color: #00000000;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color:rgb(255, 128, 24);
+  }
+  

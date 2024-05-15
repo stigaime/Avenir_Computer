@@ -3,21 +3,58 @@
 {% block title %}Avenir Computer{% endblock %}
 
 {% block body %}
+<body class="">
 
-<div class="d-flex card text-bg-dark">
-  <img src="..." class="card-img" alt="...">
-  <div class="card-img-overlay">
-    <h5 class="card-title">AVENIR COMPUTER</h5>
-    <p class="card-text">REPARATION ET VENTE INFORMATIQUE</p>
+<div class="d-flex card text-bg-dark ">
+  <img src="{{asset('images/pcmain2.jpg')}}" class="width" alt="...">
+  <div class="card-img-overlay text-center">
+    <h1 class="pdaime ">AVENIR COMPUTER</h1>
+    <p class="card-text text-white">REPARATION ET VENTE INFORMATIQUE</p>
 
   </div>
 </div>
+
+
+{# NOS ACTIVITES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #}
+
+
+<div class="card mb-3 w-100 bg-dark" style=" height : 600px">
+  <div class="row g-0">
+    <div class="col-md-4"> 
+      <img src="{{asset('images/pcmain1.jpg')}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-orange fs-1 text-center">NOS ACTIVITES</h5>
+        <p class="card-text text-white fs-3">La pluralité de nos compétences se retrouve au sein de notre unité de commercialisation, tant au niveau du choix et de la cohérence des produits les plus récents et les plus fiables du marché, qu'au sérieux de la qualité de l'assemblage qui s'effectue dans un délai maximum de 24h. <br> <br> Notre diversité de compétences nous amène bien évidemment à générer la vente de produits périphériques : Matériels : Imprimantes, Scanners, Scanners à diapositives, Modems, Switch divers, câbles en tout genres, etc ... Logiciels : Educatifs, Bureautiques, Professionnels, etc ... </p>
+        
+      </div>
+    </div>
+  </div>
+  <div class="d-flex align-items-center">
+    <div class="text-center">
+  <p class=" text-orange"><br>Une équipe se tient même à votre disposition pour toute installation, mise en service, prise en main et peut également intervenir sur site dans le cadre de la formation ou de la maintenance. <br> <br> Un service spécialisé Réseau reste en permanence à votre écoute et intervient dans la conception et l'élaboration de vos besoins. <br> <br> Nous espérons que cette brève présentation de nos équipes sera à même de vous inciter à nous rendre visite ou bien à continuer de surfer sur notre site, qui est en permanence remis à jour, afin de vous permettre de profiter des nouveautés présentées sur le marché et des tarifs préférentiels que nous pouvons vous accorder.
+  </p>
+  </div>
+  </div>
+</div>
+
+{# LIENS PHOTO? PORTABLES COMPOSANTS ETC !!!!!!!!!!!!!!!!!!!!!!!!!!!!! #}
+     
+
+
+
+
+
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
 
-
+</body>
 
 {% endblock %}
+  {#<h1 class="text-orange ">AVENIR COMPUTER</h1>
+    <p class="card-text text-white">REPARATION ET VENTE INFORMATIQUE</p>
+#}

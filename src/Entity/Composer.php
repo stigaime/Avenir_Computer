@@ -16,8 +16,8 @@ class Composer
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column]
-    private ?float $price = null;
+    #[ORM\Column(length: 255)]
+    private ?string $price = null;
 
     #[ORM\Column(length: 255)]
     private ?string $description = null;
@@ -30,6 +30,9 @@ class Composer
 
     #[ORM\Column(length: 255)]
     private ?string $picture = null;
+
+    #[ORM\ManyToOne(inversedBy: 'composer')]
+    private ?Category $category = null;
 
     public function getId(): ?int
     {
@@ -48,12 +51,12 @@ class Composer
         return $this;
     }
 
-    public function getPrice(): ?float
+    public function getPrice(): ?string
     {
         return $this->price;
     }
 
-    public function setPrice(float $price): static
+    public function setPrice(string $price): static
     {
         $this->price = $price;
 
@@ -104,6 +107,18 @@ class Composer
     public function setPicture(string $picture): static
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }

@@ -5,25 +5,36 @@
 {#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
 {% block body %}
 
-<body>
+<body class="bg-home">
 
-<h1>PORTABLES
-</h1>
-    <ul>
-{% for portable in portables %}
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{ portable.title }}</h5>
-    <p class="card-text">{{ portable.description }}</p>
-     <h5 class="card-title">{{ portable.price }} €</h5>
-
-    <a href="{{ path('app_portable_show', { id: portable.id}) }}" class="btn btn-danger">Détails</a>
-  </div>
+<h1 class="text-orange text-center mb-4">PORTABLES</h1>
+<div class="d-flex justify-content-center">
+    <ul class="list-unstyled">
+        {% for portable in portables %}
+        <li>
+            <div class="row justify-content-center">
+                <div class="col-9">
+                    <div class="card bg-dark mb-3" style="width: 100%;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-orange">{{ portable.title }}</h5>
+                            <p class="card-text text-white">{{ portable.description }}</p>
+                            <h5 class="card-title text-white">{{ portable.price }} €</h5>
+                            <a href="{{ path('app_portable_show', { id: portable.id}) }}" class="btn btn-custom">Détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
-   
-{% endfor %}
-</ul>
-  
+
+<style>
+    .card {
+        border: 1px solid white; /* Définir la bordure de la carte en blanc */
+    }
+</style>
+
 </body>
 {% endblock %}

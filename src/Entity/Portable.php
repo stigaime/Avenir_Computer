@@ -20,8 +20,9 @@ class Portable
     #[ORM\Column]
     private ?float $price = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $picture = null;
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $picture;
+   
 
     //#[Assert\Image(maxSize: "1024k")]
 
