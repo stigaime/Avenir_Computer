@@ -9,16 +9,16 @@ ul {
     list-style: none;
 }
 .dropdown-item:hover {
-    background-color: rgb(255, 128, 24) !important; /* Changez la couleur de fond en vert lorsque survolé */
+    background-color: rgb(0, 140, 255) !important; /* Changez la couleur de fond en vert lorsque survolé */
     
 }
 .btn-custom {
-    background-color:rgb(255, 128, 24);
+    background-color:rgb(0, 140, 255);
     color: white;
     /* Autres styles personnalisés si nécessaire */
 }
 .text-orange {
-    color:rgb(255, 128, 24) !important;
+    color:rgb(0, 140, 255) !important;
    
     
 }
@@ -29,11 +29,11 @@ ul {
 }
 
 .nav-orange:hover {
-    background-color: rgb(255, 128, 24) !important; /* Changez la couleur de fond en vert lorsque survolé */
+    background-color: rgb(0, 140, 255) !important; /* Changez la couleur de fond en vert lorsque survolé */
     
 }
 .bg-avenir {
-    background-color: rgb(255, 128, 24) ;
+    background-color: rgb(0, 140, 255) ;
 }
 
 .pdaime {
@@ -42,7 +42,7 @@ ul {
   
       color: white;
       -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color:rgb(255, 128, 24);
+      -webkit-text-stroke-color:rgb(0, 140, 255);
   }
 
   .pdaime1 {
@@ -51,7 +51,7 @@ ul {
   
       color: white;
       -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color:rgb(255, 128, 24);
+      -webkit-text-stroke-color:rgb(0, 140, 255);
   }
   .pdaime2 {
     padding-top: 20rem;
@@ -59,7 +59,7 @@ ul {
   
       color: white;
       -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color:rgb(255, 128, 24);
+      -webkit-text-stroke-color:rgb(0, 140, 255);
   }
 
  
@@ -95,7 +95,7 @@ ul {
   z-index: 1;
   opacity: 1;
   padding: 30px 0 30px 10px;
-  background-color: rgb(255, 128, 24);
+  background-color: rgb(0, 140, 255);
   width: 40%;
   -webkit-transform: translateX(150%);
   transform: translateX(150%);
@@ -111,7 +111,7 @@ ul {
   height: 0;
   border-style: solid;
   border-width: 280px 280px 280px 0;
-  border-color: transparent rgb(255, 128, 24) transparent transparent;
+  border-color: transparent rgb(0, 140, 255) transparent transparent;
 }
 .imavenir:after {
   position: absolute;
@@ -151,7 +151,7 @@ ul {
   left: 0;
   padding: 20px 30px;
   font-size: 44px;
-  color: rgb(255, 128, 24);
+  color: rgb(0, 140, 255);
   opacity: 0;
 }
 .imavenir a {
@@ -179,3 +179,4 @@ ul {
   transform: translateX(0);
   opacity: 1;
 }
+
