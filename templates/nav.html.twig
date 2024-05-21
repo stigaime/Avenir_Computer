@@ -3,20 +3,21 @@
 
 <nav class="navbar navbar-expand-lg bg-dark ">
   <div class="container-fluid">
-    <a class="navbar-brand text-orange" href="#">AVENIR <br> COMPUTER</a>
+ <img src="{{asset('images/LOGO2.gif')}}" alt="sample67" class="img-compu " />
+    {#<a class="navbar-brand text-orange" href="#">AVENIR <br> COMPUTER</a>#}
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link nav-orange active text-white" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
+          <a class="nav-link nav-orange active text-white fs-4" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="{{ path('app_portable') }}">Portables</a>
+          <a class="nav-link nav-orange text-white fs-4" href="{{ path('app_portable') }}">Portables</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link nav-orange dropdown-toggle text-white fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Composants
           </a>
           <ul class="dropdown-menu bg-dark">
@@ -38,7 +39,7 @@
 
 
            <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link nav-orange dropdown-toggle text-white fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Périphériques Pc
           </a>
           <ul class="dropdown-menu bg-dark">
@@ -54,7 +55,7 @@
             
           </ul>
          <li class="nav-item">
-          <a class="nav-link text-white" href="{{ path('app_pc_mesure') }}">Pc sur mesure</a>
+          <a class="nav-link nav-orange text-white fs-4" href="{{ path('app_pc_mesure') }}">Pc sur mesure</a>
         </li>
 
         </ul>
@@ -70,10 +71,10 @@
           <a class="nav-link text-white" href="{{ path('app_logout')}}">    {{ app.user.email }}</a>
         {% else %}
            <li class="nav-item">
-          <a class="nav-link text-white" href="{{ path('app_login') }}">Connexion</a>
+          <a class="nav-link nav-orange text-white" href="{{ path('app_login') }}">Connexion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="{{ path('app_register') }}">Inscription</a>
+          <a class="nav-link nav-orange text-white" href="{{ path('app_register') }}">Inscription</a>
         </li>
         {% endif %}
 
@@ -83,3 +84,19 @@
     </div>
   </div>
 </nav>
+<style>
+  .img-compu {
+    width: 20rem; /* Taille souhaitée en pixels */
+    height: 6rem; /* Pour conserver les proportions de l'image */
+  }
+    .navbar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem; /* Hauteur de la bande bleue */
+    background-color: rgb(0, 140, 255); /* Couleur de la bande */
+  }
+</style>
