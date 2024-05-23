@@ -3,101 +3,114 @@
 {% block title %}Avenir Computer{% endblock %}
 
 {% block body %}
-<body class="">
+<body>
 
-<div class="d-flex card text-bg-dark ">
-  <img src="{{asset('images/pcmain.jpg')}}" class="width" alt="...">
-  <div class="card-img-overlay text-center">
-    <h1 class="pdaime ">AVENIR COMPUTER</h1>
+<div class="card text-bg-dark">
+  <img src="{{ asset('images/pcmain.jpg') }}" class="img-fluid" alt="...">
+  <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+    <h1 class="pdaime">AVENIR COMPUTER</h1>
     <p class="pdaime1">REPARATION ET VENTE DE MATERIEL INFORMATIQUE</p>
-    <h2 class="pdaime2"><a class="pdaime2" href="{{ path('app_pc_mesure') }}">CREEZ LE PC DE VOS REVES !!</a></h2>
+    <h2 class="pdaime2 mt-3">
+      <a class="pdaime2" href="{{ path('app_pc_mesure') }}">CREEZ LE PC DE VOS REVES !!</a>
+    </h2>
   </div>
 </div>
 
-
-{# NOS ACTIVITES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #}
-
-
-<div class="card mb-3 w-100 bg-dark" style=" height : 600px">
+<div class="card mb-3 bg-dark text-white">
   <div class="row g-0">
-    <div class="col-md-4"> 
-      <img src="{{asset('images/pcmain1.jpg')}}" class="img-fluid rounded-start" alt="...">
+    <div class="col-md-4">
+      <img src="{{ asset('images/vitrine.jpg') }}" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title text-orange fs-1 text-center">NOS ACTIVITES</h5>
-        <p class="card-text text-white fs-3">La pluralité de nos compétences se retrouve au sein de notre unité de commercialisation, tant au niveau du choix et de la cohérence des produits les plus récents et les plus fiables du marché, qu'au sérieux de la qualité de l'assemblage qui s'effectue dans un délai maximum de 24h. <br> <br> Notre diversité de compétences nous amène bien évidemment à générer la vente de produits périphériques : Matériels : Imprimantes, Scanners, Scanners à diapositives, Modems, Switch divers, câbles en tout genres, etc ... Logiciels : Educatifs, Bureautiques, Professionnels, etc ... </p>
-        
+        <p class="card-text fs-5">La pluralité de nos compétences se retrouve au sein de notre unité de commercialisation, tant au niveau du choix et de la cohérence des produits les plus récents et les plus fiables du marché, qu'au sérieux de la qualité de l'assemblage qui s'effectue dans un délai maximum de 24h. <br><br> Notre diversité de compétences nous amène bien évidemment à générer la vente de produits périphériques : Matériels : Imprimantes, Scanners, Scanners à diapositives, Modems, Switch divers, câbles en tout genres, etc ... Logiciels : Educatifs, Bureautiques, Professionnels, etc ...</p>
       </div>
     </div>
   </div>
-  <div class="d-flex align-items-center">
-    <div class="text-center">
-  <p class=" text-orange"><br>Une équipe se tient même à votre disposition pour toute installation, mise en service, prise en main et peut également intervenir sur site dans le cadre de la formation ou de la maintenance. <br> <br> Un service spécialisé Réseau reste en permanence à votre écoute et intervient dans la conception et l'élaboration de vos besoins. <br> <br> Nous espérons que cette brève présentation de nos équipes sera à même de vous inciter à nous rendre visite ou bien à continuer de surfer sur notre site, qui est en permanence remis à jour, afin de vous permettre de profiter des nouveautés présentées sur le marché et des tarifs préférentiels que nous pouvons vous accorder.
-  </p>
-  </div>
+  <div class="card-body">
+    <p class="text-orange fs-5 text-center">Une équipe se tient même à votre disposition pour toute installation, mise en service, prise en main et peut également intervenir sur site dans le cadre de la formation ou de la maintenance. <br><br> Un service spécialisé Réseau reste en permanence à votre écoute et intervient dans la conception et l'élaboration de vos besoins. <br><br> Nous espérons que cette brève présentation de nos équipes sera à même de vous inciter à nous rendre visite ou bien à continuer de surfer sur notre site, qui est en permanence remis à jour, afin de vous permettre de profiter des nouveautés présentées sur le marché et des tarifs préférentiels que nous pouvons vous accorder.</p>
   </div>
 </div>
 
-{# LIENS PHOTO? PORTABLES COMPOSANTS ETC !!!!!!!!!!!!!!!!!!!!!!!!!!!!! #}
-     
-    
-<div class="d-flex w-100 p-5 m-5">
-<figure class="imavenir">
-  <img src="{{asset('images/portable.jpg')}}" alt="sample67" class="" />
-  <figcaption>
-    <h3>Portables</h3>
-    <p>De nombreux modèles de portables en stock en boutique et en plusieurs configurations.</p>
-  </figcaption><i class="ion-ios-home-outline"></i>
-  <a href="{{ path('app_portable') }}"></a>
-</figure>
-
-<figure class="imavenir">
-  <img src="{{asset('images/compo.jpg')}}" alt="sample67" class="" />
-  <figcaption>
-    <h3>Composants</h3>
-    <p>Découvrez nos gammes de composants, garantissant fiabilité, performances et compatibilité.</p>
-  </figcaption><i class="ion-ios-home-outline"></i>
-  <a href="#"></a>
-</figure>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-12 col-md-6 mb-4">
+      <figure class="imavenir">
+        <img src="{{ asset('images/portable.jpg') }}" alt="Portables" class="img-fluid">
+        <figcaption class="mt-2">
+          <h3>Portables</h3>
+          <p>De nombreux modèles de portables en stock en boutique et en plusieurs configurations.</p>
+        </figcaption>
+        <a href="{{ path('app_portable') }}" class="stretched-link"></a>
+      </figure>
+    </div>
+    <div class="col-12 col-md-6 mb-4">
+      <figure class="imavenir">
+        <img src="{{ asset('images/compo.jpg') }}" alt="Composants" class="img-fluid">
+        <figcaption class="mt-2">
+          <h3>Composants</h3>
+          <p>Découvrez nos gammes de composants, garantissant fiabilité, performances et compatibilité.</p>
+        </figcaption>
+        <a href="#" class="stretched-link"></a>
+      </figure>
+    </div>
+  </div>
 </div>
-
-{#<div class="d-flex w-100 p-5 m-5">
-<figure class="imavenir img-custom">
-  <img src="{{asset('images/rogcasque.jpg')}}" alt="sample67" />
-  <figcaption>
-    <h3>Périphériques</h3>
-    <p>Un large choix de périphériques, en passant du casque aux onduleurs.</p>
-  </figcaption><i class="ion-ios-home-outline"></i>
-  <a href="{{ path('app_composer', {'id' : '1'}) }}"></a>
-</figure>#}
-  
-{#<figure class="imavenir">
-  <img src="{{asset('images/pcmain1.jpg')}}" alt="sample67" />
-  <figcaption>
-    <h3>Pc sur mesure</h3>
-    <p>Construisez votre propre pc selon vos envies.</p>
-  </figcaption><i class="ion-ios-home-outline"></i>
-  <a href="#"></a>
-</figure>
-</div>#}
-
-
 
 <style>
-  .img-custom {
-    width: 50rem; /* Taille souhaitée en pixels */
-    height: 40rem; /* Pour conserver les proportions de l'image */
+  .pdaime {
+    font-size: 7rem;
   }
 
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+  .pdaime1 {
+    font-size: 4rem;
+  }
+
+  .pdaime2 {
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .pdaime {
+      font-size: 1.5rem;
+    }
+
+    .pdaime1 {
+      font-size: 1.25rem;
+    }
+
+    .pdaime2 {
+      font-size: 1rem;
+    }
+
+    .card-body p {
+      font-size: 1rem;
+    }
+  }
+
+  .text-orange {
+    color: rgb(255, 165, 0);
+  }
+
+  .imavenir img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .imavenir figcaption {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .imavenir h3 {
+    font-size: 1.5rem;
+  }
+
+  .imavenir p {
+    font-size: 1rem;
+  }
 </style>
 
-
 </body>
-
 {% endblock %}
-  {#<h1 class="text-orange ">AVENIR COMPUTER</h1>
-    <p class="card-text text-white">REPARATION ET VENTE INFORMATIQUE</p>
-#}

@@ -1,50 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{# ... #}
 {% block title %}Connexion{% endblock %}
 
 {% block body %}
-    {% if error %}
-        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
-    
-    <div class="container">
-        <form class="form-control btn">
-            <div class="row">
-                <div class="col-md-6">
-                    <label class="text-orange" for="username">Email:</label>
-                    <input class="form-control btn input-white-bg text-orange" type="text" id="username" name="_username" value="{{ last_username }}">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            {% if error %}
+                <div class="alert alert-danger text-center" role="alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+                        <h1 class="text-center mb-4 text-orange">Connexion</h1>
+            
+            <form action="{{ path('app_login') }}" method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label text-white">Email:</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" style="background-color: white;">
                 </div>
-                <div class="col-md-6">
-                    <label class="text-orange" for="password">Mot de passe:</label>
-                    <input class="form-control btn input-white-bg text-orange" type="password" id="password" name="_password">
+                <div class="mb-3">
+                    <label for="password" class="form-label text-white">Mot de passe:</label>
+                    <input type="password" id="password" name="_password" class="form-control" style="background-color: white;">
                 </div>
-            </div>
+                {# If you want to control the URL the user is redirected to on success
+                <input type="hidden" name="_target_path" value="/account"> #}
 
-            {# If you want to control the URL the user is redirected to on success
-            <input type="hidden" name="_target_path" value="/account"> #}
+                <button type="submit" class="btn btn-primary btn-block btn-custom">Se connecter</button>
 
-            <button class="form-control btn bg-white " type="submit">Se connecter</button>
-
-            <div>
-                <a href="{{ path('app_forgot_password_request')}}">Mot de passe oublié?</a>
-            </div>
-        </form>
+                <div class="text-center mt-3">
+                    <a href="{{ path('app_forgot_password_request')}}" class="text-white">Mot de passe oublié?</a>
+                </div>
+            </form> 
+        </div>
     </div>
-
-   style>
-        .input-white-bg {
-            background-color: #fff; /* Fond blanc */
-        }
-
-        /* Définir le fond lorsqu'un input est survolé */
-        .input-white-bg:hover {
-            background-color: #f0f0f0; /* Fond gris clair */
-        }
-
-        /* Définir le fond lorsqu'un input est actif */
-        .input-white-bg:focus {
-            background-color: #f0f0f0; /* Fond gris clair */
-        }
-    </style>
+</div>
+<style>
+   .btn-custom:hover {
+        background-color: white; /* Couleur de fond au survol */
+        color: blue; /* Couleur du texte au survol */
+    }
+</style>
 {% endblock %}

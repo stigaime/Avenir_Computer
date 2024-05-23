@@ -1,34 +1,33 @@
 {% extends 'base.html.twig' %}
 
-
 {% block title %}{{ parent() }} - Composants{% endblock %}
-{#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
 {% block body %}
 <body>
 
- {#<h1> composer {{ composer.id }}
- </h1>#}
- <h1 class="text-orange text-center"> {{ composer.name }}
- </h1>
- {#<h2> {{ composer.description }}
- </h2>
-  <h2> {{ composer.price }}
- </h2>
-   <h2> {{ composer.stock }}
- </h2>#}
-<div class="card bg-dark mb-3">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
+ <h1 class="text-orange text-center">{{ composer.name }}</h1>
 
-    <p class="card-text text-white">{{ composer.description }}</p>
-    <h5 class="card-title text-white">{{ composer.price }} €</h5>
-      <a href="" class="btn btn-custom">Acheter</a>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-10"> <!-- Utilisation de col-lg-9 pour occuper 3/4 de l'écran sur les écrans larges -->
+      <div class="card bg-dark mb-3">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <p class="card-text text-white text-center">{{ composer.description }}</p>
+          <h5 class="card-title text-white text-center">{{ composer.price }} €</h5>
+          <a href="" class="btn btn-custom">Acheter</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
     .card {
         border: 1px solid white; /* Définir la bordure de la carte en blanc */
+    }
+       .btn-custom:hover {
+        background-color: white; /* Couleur de fond au survol */
+        color: blue; /* Couleur du texte au survol */
     }
 </style>
 
