@@ -61,123 +61,124 @@ ul {
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color:rgb(0, 140, 255);
   }
-
-.imavenir {
-  font-family: 'Playfair Display', Arial, sans-serif;
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-  width: 100%;
-  max-width: 50rem;
-  color: white;
-  text-align: right;
-  font-size: 30px;
-}
-
-.imavenir * {
-  box-sizing: border-box;
-  transition: all 0.35s ease;
-}
-
-.imavenir img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  backface-visibility: hidden;
-}
-
-.imavenir figcaption {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  opacity: 1;
-  padding: 30px 10px;
-  background-color: rgb(0, 140, 255);
-  width: 40%;
-  transform: translateX(150%);
-}
-
-.imavenir figcaption:before {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 100%;
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 280px 280px 280px 0;
-  border-color: transparent rgb(0, 140, 255) transparent transparent;
-}
-
-.imavenir:after {
-  position: absolute;
-  bottom: 50%;
-  right: 40%;
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 120px 120px 0 120px;
-  border-color: transparent transparent transparent;
-  transform: translateY(-50%);
-  transition: all 0.35s ease;
-}
-
-.imavenir h3,
-.imavenir p {
-  line-height: 1.5em;
-  transform: translateX(-30px);
-  margin: 0;
-}
-
-.imavenir h3 {
-  margin: 0 0 5px;
-  line-height: 1.1em;
-  font-weight: 900;
-  font-size: 1.4em;
-  opacity: 0.75;
-}
-
-.imavenir p {
-  font-size: 0.8em;
-}
-
-.imavenir i {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 20px 30px;
-  font-size: 44px;
-  color: rgb(0, 140, 255);
-  opacity: 0;
-}
-
-.imavenir a {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-.imavenir:hover img,
-.imavenir.hover img {
-  opacity: 0.5;
-}
-
-.imavenir:hover:after,
-.imavenir.hover:after,
-.imavenir:hover figcaption,
-.imavenir.hover figcaption,
-.imavenir:hover i,
-.imavenir.hover i {
-  transform: translateX(0);
-  opacity: 1;
-}
+  .imavenir {
+    font-family: 'Playfair Display', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    width: 100%;
+    max-width: 60rem;
+    color: white;
+    text-align: right;
+    font-size: 30px;
+  }
+  
+  .imavenir * {
+    box-sizing: border-box;
+    transition: all 0.35s ease;
+  }
+  
+  .imavenir img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+  }
+  
+  .imavenir figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 1;
+    padding: 40px 10px;
+    background-color: rgb(0, 140, 255);
+    width: 50%;
+    transform: translateX(150%);
+    margin: 0; /* Assurez-vous qu'il n'y a pas de marge */
+  }
+  
+  .imavenir figcaption:before {
+    position: absolute;
+    top: 50%; /* Centrer verticalement */
+    transform: translateY(-50%);
+    right: 100%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 280px 280px 280px 0;
+    border-color: transparent rgb(0, 140, 255) transparent transparent;
+  }
+  
+  .imavenir:after {
+    position: absolute;
+    bottom: 50%;
+    right: 40%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 120px 120px 0 120px;
+    border-color: transparent transparent transparent;
+    transform: translateY(-50%);
+    transition: all 0.35s ease;
+  }
+  
+  .imavenir h3,
+  .imavenir p {
+    line-height: 1.5em;
+    transform: translateX(-30px);
+    margin: 0;
+  }
+  
+  .imavenir h3 {
+    margin: 0 0 5px;
+    line-height: 1.1em;
+    font-weight: 900;
+    font-size: 1.4em;
+    opacity: 0.75;
+  }
+  
+  .imavenir p {
+    font-size: 0.8em;
+  }
+  
+  .imavenir i {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 30px;
+    font-size: 44px;
+    color: rgb(0, 140, 255);
+    opacity: 0;
+  }
+  
+  .imavenir a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .imavenir:hover img,
+  .imavenir.hover img {
+    opacity: 0.5;
+  }
+  
+  .imavenir:hover:after,
+  .imavenir.hover:after,
+  .imavenir:hover figcaption,
+  .imavenir.hover figcaption,
+  .imavenir:hover i,
+  .imavenir.hover i {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
 
 .container .row .col-12.col-md-6.mb-4 {
   display: flex;
