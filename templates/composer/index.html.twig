@@ -1,12 +1,10 @@
 {% extends 'base.html.twig' %}
 
-
 {% block title %}{{ parent() }} - Composants{% endblock %}
-{#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
+
 {% block body %}
 
-<body class="bg-home">       
-
+<body class="bg-home">
 
 <h1 class="text-orange text-center mb-4">{{ category.name }}</h1>
 <div class="d-flex justify-content-center">
@@ -17,10 +15,13 @@
                 <div class="row justify-content-center">
                     <div class="col-9">
                         <div class="card bg-dark mb-3" style="width: 100%;">
-                            <img src="..." class="card-img-top" alt="...">
+                          {% if composer.picture %}
+                                <img src="{{ asset('images/' ~ composer.picture) }}" class="card-img-top" alt="{{ composer.name }}">
+                            {% else %}
+                                <img src="{{ asset('images/default-image.jpg') }}" class="card-img-top" alt="Image non disponible">
+                            {% endif %}
                             <div class="card-body text-center">
                                 <h5 class="card-title text-orange">{{ composer.name }}</h5>
-                                {#<p class="card-text text-white">{{ composer.description }}</p>#}
                                 <h5 class="card-title text-white">{{ composer.price }} €</h5>
                                 <a href="{{ path('app_composer_show', { id: composer.id}) }}" class="btn btn-custom">Détails</a>
                             </div>
@@ -36,7 +37,12 @@
     .card {
         border: 1px solid white; /* Définir la bordure de la carte en blanc */
     }
-       .btn-custom:hover {
+     .card-img-top {
+        max-width: 50rem;
+        max-height: 20rem; /* You can adjust this value to your preferred maximum height */
+        object-fit: cover; /* This ensures the image covers the area without distortion */
+     }
+    .btn-custom:hover {
         background-color: white; /* Couleur de fond au survol */
         color: blue; /* Couleur du texte au survol */
     }
@@ -44,5 +50,3 @@
 
 </body>
 {% endblock %}
-
-
