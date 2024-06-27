@@ -32,6 +32,24 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'boolean')]
     private $isVerified = false;
 
+    #[ORM\Column(length: 255)]
+    private ?string $Nom = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Prenom = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Adresse = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Ville = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Pays = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Code_postale = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -110,6 +128,78 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsVerified(bool $isVerified): static
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    public function getNom(): ?string
+    {
+        return $this->Nom;
+    }
+
+    public function setNom(string $Nom): static
+    {
+        $this->Nom = $Nom;
+
+        return $this;
+    }
+
+    public function getPrenom(): ?string
+    {
+        return $this->Prenom;
+    }
+
+    public function setPrenom(string $Prenom): static
+    {
+        $this->Prenom = $Prenom;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->Adresse;
+    }
+
+    public function setAdresse(string $Adresse): static
+    {
+        $this->Adresse = $Adresse;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->Ville;
+    }
+
+    public function setVille(string $Ville): static
+    {
+        $this->Ville = $Ville;
+
+        return $this;
+    }
+
+    public function getPays(): ?string
+    {
+        return $this->Pays;
+    }
+
+    public function setPays(string $Pays): static
+    {
+        $this->Pays = $Pays;
+
+        return $this;
+    }
+
+    public function getCodePostale(): ?string
+    {
+        return $this->Code_postale;
+    }
+
+    public function setCodePostale(string $Code_postale): static
+    {
+        $this->Code_postale = $Code_postale;
 
         return $this;
     }

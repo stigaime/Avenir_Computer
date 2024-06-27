@@ -1,32 +1,51 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}{{ parent() }} - Contact{% endblock %}
-{#{% form_theme contactForm 'bootstrap_5_layout.html.twig' %}#}
+
 {% block body %}
 
-<div class="container">
-
-<h1>contactez-nous</h1>
-<h2>Email</h2>
-
-{{ form_start(form)}}
-
-    {{form_widget(form)}}
-
-    <button class="btn btn-secondary" formnovalidate>Envoyer</button>
-
-
-{{ form_end(form)}}
-
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="text-center">Contactez-nous</h1>
+            
+            <div class="mb-4">
+                <h2 class="text-orange">Email</h2>
+                {{ form_start(form) }}
+                    <div class="mb-3">
+                    <div class="text-white">
+                        {{ form_label(form.email) }}
+                    </div>
+                        {{ form_widget(form.email) }}
+                    </div>
+                    <div class="mb-3">
+                    <div class="text-white">
+                        {{ form_label(form.sujet) }}
+                    </div>
+                        {{ form_widget(form.sujet) }}
+                    </div>
+                    <div class="mb-3">
+                    <div class="text-white">
+                        {{ form_label(form.message) }}
+                    </div>
+                        {{ form_widget(form.message) }}
+                    </div>
+                    <button class="btn btn-primary mt-3" formnovalidate>Envoyer</button>
+                {{ form_end(form) }}
+            </div>
+            
+            <div class="mb-4 text-center">
+                <h2 class="text-orange">Téléphone</h2>
+                <h3 class="text-white">04 93 74 34 12</h3>
+            </div>
+            
+            <div class="text-center mb-4">
+                <a aria-label="Facebook" href="https://www.facebook.com/AvenirComputer/" class="btn btn-primary">
+                    <h2>Facebook</h2>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-<h2>Téléphone</h2>
-<h3>04 93 74 34 12</h3>
-
-</div>
-
-   <a aria-label="" href="https://www.facebook.com/AvenirComputer/">
-                      <h2>Facebook</h2>
-                    </a>
 
 {% endblock %}
