@@ -38,6 +38,11 @@ class ComposerController extends AbstractController
         ]);
     }
 
+
+
+
+
+    
     #[Route('/composer/{id}', name: 'app_composer_show', requirements: ['id' => '\d+'])]
     public function show(ManagerRegistry $doctrine, string $id): Response
     {
