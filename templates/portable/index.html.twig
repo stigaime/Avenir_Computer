@@ -15,10 +15,10 @@
             <div class="row justify-content-center">
                 <div class="col-9">
                     <div class="card bg-dark mb-3" style="width: 100%;">
-                        <img src="{{ portable.picture }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('images/' ~ portable.picture) }}" class="card-img-top" alt="...">
                         <div class="card-body text-center">
                             <h5 class="card-title text-orange">{{ portable.title }}</h5>
-                            <p class="card-text text-white">{{ portable.description }}</p>
+                         
                             <h5 class="card-title text-white">{{ portable.price }} €</h5>
                             <a href="{{ path('app_portable_show', { id: portable.id}) }}" class="btn btn-custom">Détails</a>
                         </div>
@@ -30,6 +30,10 @@
     </ul>
 </div>
 
+<div class="navigation d-flex justify-content-center">
+    {{ knp_pagination_render(pagination) }}
+</div>
+
 <style>
     .card {
         border: 1px solid white; /* Définir la bordure de la carte en blanc */
@@ -37,6 +41,11 @@
        .btn-custom:hover {
         background-color: white; /* Couleur de fond au survol */
         color: blue; /* Couleur du texte au survol */
+    }
+    .card-img-top {
+        width: 100%; /* S'assure que l'image prend toute la largeur de la carte */
+        height: 300px; /* Hauteur fixe pour toutes les images */
+        object-fit: cover; /* Remplir la carte sans déformer l'image */
     }
 </style>
 

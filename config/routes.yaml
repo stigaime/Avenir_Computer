@@ -5,3 +5,7 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+    
+app_profil_delete:
+    path: '/profil/delete'
+    controller: 'App\Controller\ProfileController::delete'

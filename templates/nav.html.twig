@@ -39,6 +39,9 @@
           </a>
           <ul class="dropdown-menu bg-dark">
             <li><a class="dropdown-item text-white" href="{{ path('app_profil') }}">Mon compte</a></li>
+        {% if app.user and 'ROLE_ADMIN' in app.user.getRoles() %} {#    ADMINNNNNNNNNNNNNNNNNNNNNNNNNNN  !!!!!!!!!!!!!#}
+            <li><a class="dropdown-item text-white" href="{{ path('app_admin') }}">Mon Back Office</a></li>
+        {% endif %}
             <li><a class="dropdown-item text-white" href="{{ path('app_logout') }}">Se déconnecter</a></li>
             <li><hr class="dropdown-divider"></li>
           </ul>
@@ -54,6 +57,8 @@
             <a class="nav-link nav-orange text-white" href="{{ path('app_register') }}">Inscription</a>
           </li>
         {% endif %}
+      
+
       </ul>
     </div>
   </div>
