@@ -38,6 +38,8 @@ class Composer
     #[ORM\ManyToOne(inversedBy: 'composer')]
     private ?Category $category = null;
 
+    
+
     public function getId(): ?int
     {
         return $this->id;

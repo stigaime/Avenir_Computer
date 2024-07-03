@@ -22,6 +22,9 @@
             <h5 class="card-title text-white text-center fs-2">{{ app.user.ville }} {{ app.user.codepostale }}</h5>
            
               <h5 class="card-title text-white text-center fs-2">{{ app.user.pays }}</h5>
+              
+              <a href="{{path('app_orders_history')}}"> Mes commandes </a>
+              
           <div><a href="{{ path('app_profil_edit') }}" class="btn btn-warning">Modifier</a>
      
             </div>

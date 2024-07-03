@@ -43,9 +43,9 @@
                     <table>
                         <tr>
                             <td>
-                                {{ user.firstName }} {{ user.lastName }}<br>
-                                {{ user.adress }}<br>
-                                {{ user.postalCode }}
+                                {{ user.nom }} {{ user.prenom }}<br>
+                                {{ user.adresse }}<br>
+                                {{ user.codepostale }}
                             </td>
                             <td>
                                 <!-- Les informations de l'entreprise ou de l'émetteur de la facture peuvent être ajoutées ici si nécessaire -->
@@ -62,8 +62,8 @@
             
             {% for detail in orderDetails %}
             <tr class="item">
-                <td>{{ detail.product.name }}</td>
-                <td>{{ detail.product.price }} €</td>
+                <td>{{ detail.composer.name }}</td>
+                <td>{{ detail.composer.price }} €</td>
             </tr>
             {% endfor %}
             
