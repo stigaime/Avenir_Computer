@@ -19,6 +19,10 @@ class Composer
     #[ORM\Column(length: 255)]
     private ?string $price = null;
 
+    
+    #[ORM\Column(length: 255)]
+    private ?string $priceIdStripe = null;
+
     #[ORM\Column(length: 255)]
     private ?string $description = null;
 
@@ -119,6 +123,19 @@ class Composer
     public function setCategory(?Category $category): static
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    
+    public function getPriceIdStripe(): ?string
+    {
+        return $this->priceIdStripe;
+    }
+
+    public function setPriceIdStripe(string $priceIdStripe): static
+    {
+        $this->priceIdStripe = $priceIdStripe;
 
         return $this;
     }

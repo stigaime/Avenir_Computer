@@ -7,6 +7,8 @@ parameters:
     locale: 'fr'
     app.path.composer_images: public/images
     app.path.portable_images: public/images
+    app.stripe_key: '%env(STRIPE_KEY)%'
+
 
 services:
     # default configuration for services in *this* file
