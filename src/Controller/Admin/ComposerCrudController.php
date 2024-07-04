@@ -40,6 +40,8 @@ class ComposerCrudController extends AbstractCrudController
             ->setRequired(false)
             ->hideWhenUpdating(),
             AssociationField::new('category'),
+            TextField::new('priceIdStripe', 'Price ID Stripe'),
+
             
         ];
     }

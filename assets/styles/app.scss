@@ -271,3 +271,9 @@ ul {
 .imavenir p {
   font-size: 1rem;
 }
+
+@media (max-width: 767.98px) {
+  #repair-sale {
+      display: none !important;
+  }
+}

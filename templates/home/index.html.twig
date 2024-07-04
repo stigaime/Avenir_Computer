@@ -3,15 +3,16 @@
 {% block title %}Avenir Computer{% endblock %}
 
 {% block body %}
+
 <body>
 
 <div class="card text-bg-dark">
   <img src="{{ asset('images/pcmain.jpg') }}" class="img-fluid" alt="...">
   <div class="card-img-overlay text-center d-flex flex-column justify-content-center">
     <h1 class="pdaime">AVENIR COMPUTER</h1>
-    <p id="repair-sale" class="pdaime1"></p>
+    <p id="repair-sale" class="pdaime1 d-none d-md-block"></p>
     <h2 class="pdaime2 mt-3">
-      {#<a class="pdaime2" href="{{ path('app_pc_mesure') }}">CREEZ LE PC DE VOS REVES !!</a>#}
+  
     </h2>
   </div>
 </div>
@@ -61,7 +62,7 @@
     <p class="text-orange fs-5 text-center">Une équipe se tient même à votre disposition pour toute installation, mise en service, prise en main et peut également intervenir sur site dans le cadre de la formation ou de la maintenance. <br><br> Un service spécialisé Réseau reste en permanence à votre écoute et intervient dans la conception et l'élaboration de vos besoins. <br><br> Nous espérons que cette brève présentation de nos équipes sera à même de vous inciter à nous rendre visite ou bien à continuer de surfer sur notre site, qui est en permanence remis à jour, afin de vous permettre de profiter des nouveautés présentées sur le marché et des tarifs préférentiels que nous pouvons vous accorder.</p>
   </div>
 </div>
-
+{#
 <div class="container my-5">
   <div class="row">
     <div class="col-12 col-md-6 mb-4">
@@ -86,7 +87,7 @@
     </div>
   </div>
 </div>
-
+#}
 <style>
   .custom-carousel-control-prev,
   .custom-carousel-control-next {
@@ -151,24 +152,5 @@
     font-size: 1rem;
   }
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const text = "REPARATION ET VENTE DE MATERIEL INFORMATIQUE";
-    let index = 0;
-    const element = document.getElementById('repair-sale');
-
-    function typeWriter() {
-      if (index < text.length) {
-        element.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, 100);
-      }
-    }
-
-    typeWriter();
-  });
-</script>
-
 </body>
 {% endblock %}

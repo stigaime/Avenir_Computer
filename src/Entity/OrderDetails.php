@@ -19,7 +19,7 @@ class OrderDetails
 
     #[ORM\ManyToOne(inversedBy: 'orderDetails')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Composer $Composer = null;
+    private ?Composer $composer = null;
 
     #[ORM\Column]
     private ?int $quantity = null;
@@ -43,12 +43,12 @@ class OrderDetails
 
     public function getComposer(): ?Composer
     {
-        return $this->Composer;
+        return $this->composer;
     }
 
-    public function setComposer(?Composer $Composer): static
+    public function setComposer(?Composer $composer): static
     {
-        $this->Composer = $Composer;
+        $this->composer = $composer;
 
         return $this;
     }
@@ -65,3 +65,4 @@ class OrderDetails
         return $this;
     }
 }
+ 

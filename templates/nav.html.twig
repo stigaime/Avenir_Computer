@@ -11,7 +11,11 @@
           <a class="nav-link nav-orange active text-white fs-4" aria-current="page" href="{{ path('app_home') }}">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-orange text-white fs-4" href="{{ path('app_portable') }}">Portables</a>
+               {% for category in categories %}
+               {% if category.name == "Portables" %}
+          <a class="nav-link nav-orange text-white fs-4" href="{{ path('app_composer', { id: category.id }) }}">Portables</a>
+             {% endif %}
+              {% endfor %}
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link nav-orange dropdown-toggle text-white fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

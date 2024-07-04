@@ -14,7 +14,27 @@ import './bootstrap.js';
 
 import $ from 'jquery'; // Importez jQuery
 
+ // Fonction pour vérifier si l'appareil est mobile ou tablette
+ function isMobileOrTablet() {
+    return window.matchMedia("(max-width: 767.98px)").matches;
+  }
 
+  // Si l'appareil n'est pas mobile ou tablette, exécuter le code
+  if (!isMobileOrTablet()) {
+    const text = "REPARATION ET VENTE DE MATERIEL INFORMATIQUE";
+    let index = 0;
+    const element = document.getElementById('repair-sale');
+
+    function typeWriter() {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+
+    typeWriter();
+  }
 
 
   
