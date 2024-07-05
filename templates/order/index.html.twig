@@ -15,9 +15,13 @@
                         <div class="d-flex justify-content-between">
                             <span>Commande n°{{ order.id }}</span>
                             <span>{{ order.date|date('d/m/Y') }}</span>
+                              <a href="{{asset('images/factures/' ~  order.pdf )}}"> <i class="fa-solid fa-download text-dark"></i>  </a>
                         </div>
+                        
+                      
                     </a>
                 </li>
+                
             {% endfor %}
         </ul>
     </div>

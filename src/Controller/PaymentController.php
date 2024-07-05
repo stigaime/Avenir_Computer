@@ -163,7 +163,7 @@ class PaymentController extends AbstractController
                     $entityManager->flush();
                 }
 
-                if(!$order->isPdf()) {
+                if(is_null($order->getPdf()) || empty($order->getPdf())) {
 
                     // on génera le PDF
                     $pdfOptions = new Options();
@@ -195,6 +195,7 @@ class PaymentController extends AbstractController
                     }
         
                     $pathInvoice = "./images/factures/" . $invoiceNumber . "_" . $this->getUser()->getId() . ".pdf";
+                    $pdfName = $invoiceNumber . "_" . $this->getUser()->getId() . ".pdf";
                     file_put_contents($pathInvoice, $finalInvoice);
                     // on l'enverra par mail la facture
                     // on affichera une page de succès
@@ -202,8 +203,8 @@ class PaymentController extends AbstractController
                     $email = (new TemplatedEmail())
                         ->from($this->getParameter('app.mailAddress'))
                         ->to($this->getUser()->getEmail())
-                        ->subject("Facture Blog Afpa 2024")
-                        ->htmlTemplate("invoices/email.html.twig")
+                        ->subject("Facture PAIC")
+                        ->htmlTemplate("invoices/index.html.twig")
                         ->context([
                             'user' => $this->getUser(),
                             'amount' => $order->getTotal(),
@@ -211,11 +212,11 @@ class PaymentController extends AbstractController
                             'date' => new \DateTime(),
                             'orderDetails' => $orderDetailsRepository->findBy(['id_order' => $order->getId()])
                         ])
-                        ->attach($finalInvoice, sprintf('facture-' . $invoiceNumber . 'Avenir-computer.pdf', date("Y-m-d")));
+                        ->attach($finalInvoice, sprintf('facture-' . $invoiceNumber . 'paic.pdf', date("Y-m-d")));
             
                     $mailer->send($email);
             
-                    $order->setPdf(true);
+                    $order->setPdf($pdfName);
                     $entityManager->persist($order);
                     $entityManager->flush();
             
@@ -232,8 +233,8 @@ class PaymentController extends AbstractController
                     ]);
         
                 }
-
             }
+            
 
         }
 
@@ -247,6 +248,7 @@ class PaymentController extends AbstractController
 
 
     }
+
 
     #[Route('/payment/error', name: 'app_stripe_error')]
     public function error(): Response

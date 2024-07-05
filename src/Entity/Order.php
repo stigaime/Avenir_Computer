@@ -24,7 +24,7 @@
     #[ORM\Column(length: 255)]
     private ?string $status = null;
     #[ORM\Column]
-    private ?bool $pdf = null;
+    private ?string $pdf = null;
     /**
      *  * @var Collection<int, OrderDetails>
      */
@@ -75,11 +75,11 @@
         return $this;
     }
 
-    public function isPdf(): ?bool
+    public function getPdf(): ?string
         {
             return $this->pdf;
         }
-        public function setPdf(bool $pdf): static
+        public function setPdf(string $pdf): static
         {
             $this->pdf = $pdf;
             return $this;
