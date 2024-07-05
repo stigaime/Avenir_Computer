@@ -23,7 +23,7 @@
           </a>
           <ul class="dropdown-menu bg-dark">
             {% for category in categories %}
-              {% if category.name != "Portable" %}
+              {% if category.name != "Portables" %}
                 <li>
                   <a class="dropdown-item text-white" href="{{ path('app_composer', { id: category.id }) }}">
                     {{ category.name }}
