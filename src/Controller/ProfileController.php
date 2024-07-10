@@ -53,7 +53,7 @@ class ProfileController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
-            $this->addFlash('success', 'Profile updated successfully!');
+            $this->addFlash('confirmation', 'Votre email a bien été envoyé !');
 
             return $this->redirectToRoute('app_profil');
         }

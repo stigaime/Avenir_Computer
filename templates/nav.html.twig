@@ -47,7 +47,7 @@
           <ul class="dropdown-menu bg-dark">
             <li><a class="dropdown-item text-white" href="{{ path('app_profil') }}">Mon compte</a></li>
             <li><a class="dropdown-item text-white" href="{{ path('app_cart') }}">Mon panier</a></li>
-        {% if app.user and 'ROLE_ADMIN' in app.user.getRoles() %} {#    ADMINNNNNNNNNNNNNNNNNNNNNNNNNNN  !!!!!!!!!!!!!#}
+        {% if app.user and 'ROLE_ADMIN' in app.user.getRoles() %} 
             <li><a class="dropdown-item text-white" href="{{ path('app_admin') }}">Mon Back Office</a></li>
         {% endif %}
             <li><a class="dropdown-item text-white" href="{{ path('app_logout') }}">Se déconnecter</a></li>
