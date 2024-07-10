@@ -20,7 +20,7 @@ class Category
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\OneToMany(mappedBy: 'category', targetEntity: composer::class)]
+    #[ORM\OneToMany(mappedBy: 'category', targetEntity: Composer::class)]
     private Collection $composer;
 
     public function __construct()
