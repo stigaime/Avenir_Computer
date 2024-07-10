@@ -20,7 +20,7 @@ class Category
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\OneToMany(mappedBy: 'category', targetEntity: composer::class)]
+    #[ORM\OneToMany(mappedBy: 'category', targetEntity: Composer::class)]
     private Collection $composer;
 
     public function __construct()
@@ -58,7 +58,7 @@ class Category
         return $this->composer;
     }
 
-    public function addComposer(composer $composer): static
+    public function addComposer(Composer $composer): static
     {
         if (!$this->composer->contains($composer)) {
             $this->composer->add($composer);
@@ -68,7 +68,7 @@ class Category
         return $this;
     }
 
-    public function removeComposer(composer $composer): static
+    public function removeComposer(Composer $composer): static
     {
         if ($this->composer->removeElement($composer)) {
             // set the owning side to null (unless already changed)

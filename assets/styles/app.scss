@@ -96,7 +96,7 @@ ul {
     background-color: rgb(0, 140, 255);
     width: 50%;
     transform: translateX(150%);
-    margin: 0; /* Assurez-vous qu'il n'y a pas de marge */
+    margin: 0; 
   }
   
   .imavenir figcaption:before {
@@ -270,4 +270,10 @@ ul {
 
 .imavenir p {
   font-size: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  #repair-sale {
+      display: none !important;
+  }
 }

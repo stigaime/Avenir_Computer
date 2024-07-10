@@ -29,7 +29,7 @@ class ComposerCrudController extends AbstractCrudController
         return [
            // IdField::new('id'),
             TextField::new('name'),
-            TextEditorField::new('description'),
+            TextField::new('description'),
             TextField::new('price'),
             TextField::new('stock'),
             TextField::new('type'),
@@ -40,6 +40,8 @@ class ComposerCrudController extends AbstractCrudController
             ->setRequired(false)
             ->hideWhenUpdating(),
             AssociationField::new('category'),
+            TextField::new('priceIdStripe', 'Price ID Stripe'),
+
             
         ];
     }

@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon panier{% endblock %}
+
+{% block body %}
+
+
+<div class="cart-container">
+    <h1 class="text-orange text-center">Votre panier</h1>
+
+    {% if cartItems is not empty %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Article</th>
+                    <th>Quantité</th>
+                    <th>Description</th>
+                    <th>Prix Unitaire</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in 0..(cartItems.id|length - 1) %}
+                    <tr>
+                        <td>{{ cartItems.name[i] }}</td>
+                        <td>{{ cartItems.stock[i] }}</td>
+                        <td>{{ cartItems.description[i] }}</td>
+                        <td>{{ cartItems.price[i] }} €</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="cart-total">
+            Total: <span>{{ cartTotal }} €</span>
+        </div>
+
+        <form action="{{ path('app_stripe_checkout') }}" method="POST">
+            <input type="submit" name="payer" value="Payer" class="btn btn-pay">
+        </form>
+
+        <a href="{{ path('app_cart_delete') }}" class="btn btn-warning"> Vider le panier </a>
+    {% else %}
+        <h2>Panier vide</h2>
+    {% endif %}
+</div>
+
+
+
+<style>
+/* public/css/cart.css */
+.cart-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cart-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* Met le titre en blanc */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: black; /* Change le fond du tableau en noir */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    color: white; /* Change la couleur du texte en blanc */
+}
+
+th {
+    background-color: rgb(0, 140, 255); /* Change la couleur de fond des en-têtes de colonnes en bleu */
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 20px;
+    color: white; /* Change la couleur du texte en blanc */
+}
+
+.btn-pay {
+    background-color: rgb(0, 140, 255);
+    color: white;
+    border: 1px solid blue;
+}
+
+.btn-pay:hover {
+    background-color: white;
+    color: blue;
+}
+
+.btn-outline-secondary {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-outline-secondary:hover {
+    background-color: white;
+    color: blue;
+}
+
+.btn-warning {
+    color: white;
+}
+
+.btn-warning:hover {
+    color: blue;
+}
+
+</style>
+{% endblock %}

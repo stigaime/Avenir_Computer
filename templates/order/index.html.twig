@@ -1,0 +1,28 @@
+ {# templates/order/history.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Historique de commandes{% endblock %}
+
+{% block body %}
+  <div class="container mt-5">
+        <h1 class="text-center mb-4 text-orange">Historique de commandes</h1>
+
+        <ul class="list-group">
+            {% for order in orders %}
+                <li class="list-group-item">
+                    <a href="{{ path('app_order_details', {'id': order.id}) }}" class="text-decoration-none">
+                        <div class="d-flex justify-content-between">
+                            <span>Commande n°{{ order.id }}</span>
+                            <span>{{ order.date|date('d/m/Y') }}</span>
+                              <a href="{{asset('images/factures/' ~  order.pdf )}}"> <i class="fa-solid fa-download text-dark"></i>  </a>
+                        </div>
+                        
+                      
+                    </a>
+                </li>
+                
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
